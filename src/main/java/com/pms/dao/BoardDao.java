@@ -2,14 +2,13 @@ package com.pms.dao;
 
 import java.util.List;
 import java.util.Map;
-import com.pms.domain.User;
 
-public interface UserDao {
+import com.pms.domain.Board;
 
-	List<User> findAll(Map<String, Object> params) throws Exception;
+public interface BoardDao {
 
-//  User findByEmailPassword(HashMap<String, Object> map);
-//
+  List<Board> findAll(Map<String,Object> params) throws Exception;
+
 //  int count(String keyword) throws Exception;
 //
 //  User findByNo(int no) throws Exception;

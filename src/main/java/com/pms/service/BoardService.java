@@ -1,11 +1,12 @@
 package com.pms.service;
 
 import java.util.List;
-import com.pms.domain.User;
 
-public interface UserService {
+import com.pms.domain.Board;
 
-  List<User> list() throws Exception;
+public interface BoardService {
+
+  List<Board> list() throws Exception;
 
 //  List<User> list(String keyword, int pageNo, int pageSize) throws Exception;
 //

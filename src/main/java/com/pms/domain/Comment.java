@@ -5,7 +5,6 @@ import java.sql.Date;
 public class Comment {
   private int commentNo;
   private User writer;
-  private int recipeNo;
   private String content;
   private Date createdDate;
   private Date modifiedDate;
@@ -21,12 +20,6 @@ public class Comment {
   }
   public void setWriter(User writer) {
     this.writer = writer;
-  }
-  public int getRecipeNo() {
-    return recipeNo;
-  }
-  public void setRecipeNo(int recipeNo) {
-    this.recipeNo = recipeNo;
   }
   public String getContent() {
     return content;
@@ -46,11 +39,6 @@ public class Comment {
   public void setModifiedDate(Date modifiedDate) {
     this.modifiedDate = modifiedDate;
   }
-@Override
-public String toString() {
-	return "Comment [commentNo=" + commentNo + ", writer=" + writer + ", recipeNo=" + recipeNo + ", content=" + content
-			+ ", createdDate=" + createdDate + ", modifiedDate=" + modifiedDate + "]";
-}
   
   
 }

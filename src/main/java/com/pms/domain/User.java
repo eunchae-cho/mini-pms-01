@@ -1,113 +1,79 @@
 package com.pms.domain;
 
+import java.sql.Date;
+
 public class User {
-  private int userNo;
-  private int userTypeNo;
-  private int point;
-  private String name;
-  private String nick;
-  private String email;
-  private String password;
-  private String postNo;
-  private String address;
-  private String detailAddress;
-  private String photo;
-  private String tel;
+	private int userNo;
+	private String name;
+	private String nick;
+	private String email;
+	private String password;
+	private Date birthdate;
+	private String photo;
+	private int admin;
 
+	public int getUserNo() {
+		return userNo;
+	}
 
-  public String getTel() {
-    return tel;
-  }
+	public void setUserNo(int userNo) {
+		this.userNo = userNo;
+	}
 
-  public void setTel(String tel) {
-    this.tel = tel;
-  }
+	public String getName() {
+		return name;
+	}
 
-  public int getUserNo() {
-    return userNo;
-  }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-  public void setUserNo(int userNo) {
-    this.userNo = userNo;
-  }
+	public String getNick() {
+		return nick;
+	}
 
-  public int getUserTypeNo() {
-    return userTypeNo;
-  }
+	public void setNick(String nick) {
+		this.nick = nick;
+	}
 
-  public void setUserTypeNo(int userTypeNo) {
-    this.userTypeNo = userTypeNo;
-  }
+	public String getEmail() {
+		return email;
+	}
 
-  public int getPoint() {
-    return point;
-  }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-  public void setPoint(int point) {
-    this.point = point;
-  }
+	public String getPassword() {
+		return password;
+	}
 
-  public String getName() {
-    return name;
-  }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-  public void setName(String name) {
-    this.name = name;
-  }
+	public Date getBirthdate() {
+		return birthdate;
+	}
 
-  public String getNick() {
-    return nick;
-  }
+	public void setBirthdate(Date birthdate) {
+		this.birthdate = birthdate;
+	}
 
-  public void setNick(String nick) {
-    this.nick = nick;
-  }
+	public String getPhoto() {
+		return photo;
+	}
 
-  public String getEmail() {
-    return email;
-  }
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+	public int getAdmin() {
+		return admin;
+	}
 
-  public String getPassword() {
-    return password;
-  }
+	public void setAdmin(int admin) {
+		this.admin = admin;
+	}
 
-  public void setPassword(String password) {
-    this.password = password;
-  }
-
-  public String getPostNo() {
-    return postNo;
-  }
-
-  public void setPostNo(String postNo) {
-    this.postNo = postNo;
-  }
-
-  public String getAddress() {
-    return address;
-  }
-
-  public void setAddress(String address) {
-    this.address = address;
-  }
-
-  public String getDetailAddress() {
-    return detailAddress;
-  }
-
-  public void setDetailAddress(String detailAddress) {
-    this.detailAddress = detailAddress;
-  }
-
-  public String getPhoto() {
-    return photo;
-  }
-
-  public void setPhoto(String photo) {
-    this.photo = photo;
-  }
 }
