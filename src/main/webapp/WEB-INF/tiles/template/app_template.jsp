@@ -9,20 +9,19 @@
   <meta charset="UTF-8">
   <title></title>
   
+<link rel="stylesheet" type="text/css" href="${appRoot}//node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
 
-<div class="container">
-
-<tiles:insertAttribute name="header"/>
-
-
-<div id="main">
-<tiles:insertAttribute name="body"/>
-</div>
-
-
-</div>
-
+	<div class="container">
+	
+		<tiles:insertAttribute name="header"/>
+	
+		<div id="main">
+			<tiles:insertAttribute name="body"/>
+		</div>
+	
+	</div>
+	<script src="${appRoot}/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

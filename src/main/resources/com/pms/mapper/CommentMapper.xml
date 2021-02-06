@@ -6,8 +6,7 @@
 <mapper namespace="com.pms.dao.CommentDao">
 
   <resultMap type="comment" id="CommentMap">
-    <id column="cno"           property="commentNo"/>
-    <result column="writer"  property="writer"/>
+    <id column="commentNo"           property="commentNo"/>
     <result column="content"  property="content"/>
     <result column="cdt"  property="createdDate"/>
     <result column="mdt"  property="modifiedDate"/>
@@ -21,13 +20,15 @@
 
   <select id="findAll" resultMap="CommentMap" parameterType="map">
     select 
-      cno,
-      writer,
+      commentNo,
+      u.userNo writer_no,
+      u.nick writer_nick,
       content, 
       cdt,
       mdt
     from 
-      pms01_comment
+      pms01_comment c
+      inner join pms01_user u on c.userNo = u.userNo
   </select>
   
 
