@@ -27,7 +27,7 @@
       bno,
       title,
       content, 
-      writer,
+      writer writer_nick,
       cdt,
       mdt,
       photo,

@@ -22,7 +22,7 @@
   <select id="findAll" resultMap="CommentMap" parameterType="map">
     select 
       cno,
-      writer,
+      writer writer_nick,
       content, 
       cdt,
       mdt
