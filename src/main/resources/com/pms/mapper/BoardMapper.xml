@@ -6,14 +6,13 @@
 <mapper namespace="com.pms.dao.BoardDao">
 
   <resultMap type="board" id="BoardMap">
-    <id column="bno"           property="boardNo"/>
+    <id column="boardNo"           property="boardNo"/>
     <result column="title"  property="title"/>
     <result column="content"  property="content"/>
-    <result column="writer"  property="writer"/>
     <result column="cdt"  property="createdDate"/>
      <result column="mdt"  property="modifiedDate"/>
     <result column="photo"  property="photo"/>
-    <result column="vct"  property="viewCount"/>      
+    <result column="viewCount"  property="viewCount"/>      
   
   <association property="writer" javaType="user">
       <id column="writer_no"        property="userNo"/>
@@ -22,20 +21,26 @@
 
   </resultMap>
   
-  <select id="findAll" resultMap="UserMap" parameterType="map">
+  <select id="findAll" resultMap="BoardMap" parameterType="map">
     select 
-      bno,
+      boardNo,
       title,
       content, 
+<<<<<<< HEAD
       writer writer_nick,
+=======
+      u.userNo writer_no,
+      u.name writer_nick,
+>>>>>>> f32d20faa75bcd3f7b5712dbea9c893824712d79
       cdt,
       mdt,
-      photo,
-      vct
+      b.photo,
+      viewCount
     from 
-      pms01_board
+      pms01_board b
+      inner join pms01_user u on b.userNo = u.userNo
     order by
-      bno desc
+      boardNo desc
   </select>
   
 

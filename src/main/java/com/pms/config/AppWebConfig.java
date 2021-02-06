@@ -25,8 +25,8 @@ public class AppWebConfig implements WebMvcConfigurer {
 
   @Bean
   public ViewResolver tilesViewResolver() {
-    UrlBasedViewResolver vr = new UrlBasedViewResolver();
 
+    UrlBasedViewResolver vr = new UrlBasedViewResolver();
     vr.setSuffix(".app");
     vr.setViewClass(TilesView.class);
     vr.setOrder(1);
