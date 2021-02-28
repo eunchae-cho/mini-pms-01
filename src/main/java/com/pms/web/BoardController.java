@@ -1,6 +1,7 @@
 package com.pms.web;
 
 import java.util.List;
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +17,7 @@ public class BoardController {
   BoardService boardService;
 
   @GetMapping("list")
-  public void list(Model model) throws Exception {
+  public void list(Model model, HttpSession session) throws Exception {
     List<Board> list = boardService.list();
     model.addAllAttributes(list);
   }
