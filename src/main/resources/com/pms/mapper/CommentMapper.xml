@@ -20,14 +20,9 @@
 
   <select id="findAll" resultMap="CommentMap" parameterType="map">
     select 
-<<<<<<< HEAD
-      cno,
-      writer writer_nick,
-=======
       commentNo,
       u.userNo writer_no,
       u.nick writer_nick,
->>>>>>> f32d20faa75bcd3f7b5712dbea9c893824712d79
       content, 
       cdt,
       mdt

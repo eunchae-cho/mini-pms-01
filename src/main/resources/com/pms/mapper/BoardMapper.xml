@@ -26,12 +26,8 @@
       boardNo,
       title,
       content, 
-<<<<<<< HEAD
-      writer writer_nick,
-=======
       u.userNo writer_no,
       u.name writer_nick,
->>>>>>> f32d20faa75bcd3f7b5712dbea9c893824712d79
       cdt,
       mdt,
       b.photo,

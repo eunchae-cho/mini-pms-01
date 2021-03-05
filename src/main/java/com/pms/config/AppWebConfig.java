@@ -9,6 +9,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesView;
@@ -18,10 +19,10 @@ import org.springframework.web.util.UrlPathHelper;
 @EnableWebMvc
 public class AppWebConfig implements WebMvcConfigurer {
 
-  // @Bean
-  // public ViewResolver viewResolver() {
-  // return new InternalResourceViewResolver("/WEB-INF/jsp/", ".jsp");
-  // }
+   @Bean
+   public ViewResolver viewResolver() {
+   return new InternalResourceViewResolver("/WEB-INF/jsp/", ".jsp");
+   }
 
   @Bean
   public ViewResolver tilesViewResolver() {

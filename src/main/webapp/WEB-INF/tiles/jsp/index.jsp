@@ -1,4 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
   pageEncoding="UTF-8"%>
   
-  <div>시작해보자</div>
+  <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index.jsp</title>
+</head>
+<body>
+<h1>시작해볼까</h1>
+</body>
+</html>
