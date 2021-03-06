@@ -3,11 +3,12 @@ package com.pms.domain;
 import java.sql.Date;
 
 public class Board {
+	
 	private int boardNo;
 	private String title;
 	private String content;
-	private Date createdDate;
-	private Date modifiedDate;
+	private Date cdt;
+	private Date mdt;
 	private String photo;
 
 	public int getBoardNo() {
@@ -35,19 +36,19 @@ public class Board {
 	}
 
 	public Date getRegisteredDate() {
-		return createdDate;
+		return cdt;
 	}
 
-	public void setRegisteredDate(Date createdDate) {
-		this.createdDate = createdDate;
+	public void setRegisteredDate(Date cdt) {
+		this.cdt = cdt;
 	}
 
-	public Date getModifiedDate() {
-		return modifiedDate;
+	public Date getmdt() {
+		return mdt;
 	}
 
-	public void setModifiedDate(Date modifiedDate) {
-		this.modifiedDate = modifiedDate;
+	public void setmdt(Date mdt) {
+		this.mdt = mdt;
 	}
 
 	public String getPhoto() {

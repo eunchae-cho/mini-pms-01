@@ -3,32 +3,32 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper namespace="com.pms.dao.CommentDao">
+<mapper namespace="com.pms.dao.ReviewDao">
 
-  <resultMap type="comment" id="CommentMap">
-    <id column="commentNo"           property="commentNo"/>
-    <result column="content"  property="content"/>
-    <result column="cdt"  property="createdDate"/>
-    <result column="mdt"  property="modifiedDate"/>
-  
-  <association property="writer" javaType="user">
-      <id column="writer_no"        property="userNo"/>
-      <result column="writer_nick"  property="nick"/>
+  <resultMap type="review" id="ReviewMap">
+    <id column="reviewNo"           property="reviewNo"/>
+    <result column="cdt"  property="cdt"/>
+    <result column="mdt"  property="mdt"/>
+    <result column="writer"  property="writer"/>
+    <result column="photo"  property="photo"/>
+    
+     <association property="writer" javaType="user">
+      <id column="writer_no"    property="userNo"/>
+      <result column="name"     property="name"/>
     </association>
-  
   </resultMap>
-
-  <select id="findAll" resultMap="CommentMap" parameterType="map">
+  
+  <select id="findAll" resultMap="ReviewMap" parameterType="map">
     select 
-      commentNo,
-      u.userNo writer_no,
-      u.nick writer_nick,
-      content, 
+      resviewNo,
       cdt,
-      mdt
+      mdt,
+      writer,
+      photo
     from 
-      pms01_comment c
-      inner join pms01_user u on c.userNo = u.userNo
+      pms01_review
+    order by
+      reviewNo desc
   </select>
   
 

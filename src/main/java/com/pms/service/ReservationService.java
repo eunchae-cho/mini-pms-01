@@ -2,11 +2,11 @@ package com.pms.service;
 
 import java.util.List;
 
-import com.pms.domain.Comment;
+import com.pms.domain.Reservation;
 
-public interface CommentService {
+public interface ReservationService {
 
-  List<Comment> list() throws Exception;
+  List<Reservation> list() throws Exception;
 
 //  List<User> list(String keyword, int pageNo, int pageSize) throws Exception;
 //

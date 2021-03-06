@@ -1,10 +1,12 @@
 package com.pms.domain;
 
 public class User {
+	
 	private int userNo;
 	private String name;
 	private int phone;
 	private boolean admin;
+	
 	public int getUserNo() {
 		return userNo;
 	}

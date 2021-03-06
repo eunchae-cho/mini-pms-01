@@ -3,22 +3,37 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper namespace="com.pms.dao.UserDao">
+<mapper namespace="com.pms.dao.RoomDao">
 
-  <resultMap type="user" id="UserMap">
-    <id column="userNo"           property="userNo"/>
-    <result column="name"  property="name"/>
-    <result column="phone"  property="phone"/>
-    <result column="admin"  property="admin"/>      
+  <resultMap type="room" id="RoomMap">
+    <id column="roomNo"           property="roomNo"/>
+    <result column="title"  property="title"/>
+    <result column="content"  property="content"/>
+    <result column="photo"  property="photo"/>
+    <result column="level"  property="level"/>      
+    <result column="participant"  property="participant"/>      
+    <result column="thriller"  property="thriller"/>      
+    <result column="mystery"  property="mystery"/>      
+    <result column="act"  property="act"/>      
+    <result column="solve"  property="solve"/>      
   </resultMap>
-
-  <select id="findAll" resultMap="UserMap" parameterType="map">
+  
+  <select id="findAll" resultMap="roomMap" parameterType="map">
     select 
-      userNo,
-      name,
-      phone
+      roomNo,
+      title,
+      content, 
+      photo,
+      level,
+      participant,
+      thriller,
+      mystery,
+      act,
+      solve
     from 
-      pms01_user
+      pms01_room
+    order by
+      roomNo desc
   </select>
   
 
@@ -97,13 +112,13 @@
       email = #{email}
       and password = password(#{password})
   </select>
-  -->  
+
   <insert id="insert" parameterType="user">
-    insert into pms01_user(name,email,password,photo,nick) 
-    values(#{name},#{email},password(#{password}),#{photo},#{nick})
+    insert into oi_user(name,email,tel,password,photo,nick,point,utype) 
+    values(#{name},#{email},#{tel},password(#{password}),#{photo},#{nick},0,0)
   </insert>
   
- 
+   -->  
   
 </mapper>
 

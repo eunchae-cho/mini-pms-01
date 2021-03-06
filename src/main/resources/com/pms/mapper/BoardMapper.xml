@@ -9,16 +9,9 @@
     <id column="boardNo"           property="boardNo"/>
     <result column="title"  property="title"/>
     <result column="content"  property="content"/>
-    <result column="cdt"  property="createdDate"/>
-     <result column="mdt"  property="modifiedDate"/>
+    <result column="cdt"  property="cdt"/>
+     <result column="mdt"  property="mdt"/>
     <result column="photo"  property="photo"/>
-    <result column="viewCount"  property="viewCount"/>      
-  
-  <association property="writer" javaType="user">
-      <id column="writer_no"        property="userNo"/>
-      <result column="writer_nick"  property="nick"/>
-    </association>
-
   </resultMap>
   
   <select id="findAll" resultMap="BoardMap" parameterType="map">
@@ -26,15 +19,11 @@
       boardNo,
       title,
       content, 
-      u.userNo writer_no,
-      u.name writer_nick,
       cdt,
       mdt,
-      b.photo,
-      viewCount
+      photo
     from 
-      pms01_board b
-      inner join pms01_user u on b.userNo = u.userNo
+      pms01_board
     order by
       boardNo desc
   </select>
