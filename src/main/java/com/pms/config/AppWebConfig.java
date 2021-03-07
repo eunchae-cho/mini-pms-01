@@ -19,10 +19,10 @@ import org.springframework.web.util.UrlPathHelper;
 @EnableWebMvc
 public class AppWebConfig implements WebMvcConfigurer {
 
-   @Bean
-   public ViewResolver viewResolver() {
-   return new InternalResourceViewResolver("/WEB-INF/jsp/", ".jsp");
-   }
+//   @Bean
+//   public ViewResolver viewResolver() {
+//   return new InternalResourceViewResolver("/WEB-INF/jsp/", ".jsp");
+//   }
 
   @Bean
   public ViewResolver tilesViewResolver() {
