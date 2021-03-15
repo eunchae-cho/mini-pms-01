@@ -7,12 +7,17 @@ body {
     background-color: #232628;
 }
 
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
 h1 {
     color: #EFEEEC;
     text-align: center;
 }
 
-.header {
+
+.name {
     color: #EFEEEC;
     display: flex;
     align-items: center;
@@ -24,14 +29,60 @@ h1 {
     position: relative;
     color: #EFEEEC;
     text-align: center;
-    max-width: 520px;
 }
+
 
 .navbar {
     position: absolute;
-    top: 158px;
+    top: 170px;
     left: 0;
     width: 100%;
     border-top: 1px solid #909090;
-    background-color: #efeeec;
 }
+
+.navbar.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    border-top: none;
+    background: #efeeec;
+}
+
+.nav {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: inline-block;
+}
+
+.navbar ul {
+    list-style-type: none; /* ul에서 리스트 앞의 점 없애주기*/
+    padding-left: 0;
+}
+
+/* .nav .nav-item {
+  width: 50%;
+  text-align: center;
+} */
+
+.nav .nav-item a::after {
+    display: inline-block;
+    color: #000;
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+}
+
+@media (min-width: 768px) {
+    .navbar ul {
+        /* flex-flow: row nowrap; */
+        flex-direction: row;
+        /* justify-content: flex-start; */
+    }
+}
+
