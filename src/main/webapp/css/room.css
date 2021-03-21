@@ -15,15 +15,19 @@
 .box {
     padding-top: 30px;
 }
-
+ 
+.box-content-container ::after {
+    padding: 0.01em 16px;
+    float: left;
+}
 
 .box .box-content p {
-    color: #EFEEEC;
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    color: #EFEEEC;
 }
 
 .box-img1 {
